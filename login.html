@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 300px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px #000000;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .container p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome Back!</h2>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Your Username" id="username" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Your Password" id="password" required>
+        <button type="button" onclick="validateLogin()">Login</button>
+        
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var users = [
+                { username: "ishant", password: "password1" },
+                { username: "user2", password: "password2" },
+                { username: "user3", password: "password3" },
+                { username: "user4", password: "password4" },
+                { username: "user5", password: "password5" }
+            ];
+
+            // Simple validation, you can add more complex validation logic here
+            if (username === "user" && password === "password") {
+                 
+                window.location.href = "index.html"; // Redirect to welcome.html
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+
+</html>
